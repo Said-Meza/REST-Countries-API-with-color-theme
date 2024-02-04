@@ -4,52 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="nav">
-        <h1 class="nav__title">Where in the word!</h1>
+        <h4 class="nav__title">Where in the world?</h4>
 
-        <div class="nav__darkmode">
+        <button class="nav__darkmode">
             <figure class="nav__icon">
-                <img class="nav__img" src="" alt="icon__darkmode">
+                <img class="nav__img" src="assets/luna.png" alt="icon__darkmode">
             </figure>
-            <h2 class="nav__darktext">Dark Mode</h2>
-        </div>
-
+            <h5 class="nav__darktext">Dark Mode</h5>
+        </button>
 
     </nav>
 
     <main class="main">
+
             <form class="search__form" action="#">
-                <input type="search" name="search_country" id="search_country" placeholder="Search for a country">
-            
-                <select name="search__selected" id="search__selected">
-                    <option selected >Filter by Region</option>
-                    <option  >Africa</option>
-                    <option  >America</option>
+
+                
+                    <label class="lupa" for="search_country"> <img class="lupa__img" src="assets/lupa.png" alt="search"> </label>
+                    <input type="search" class="input" name="search_country" id="search_country" placeholder="Search for a country...">
+                
+                <select class="select input" name="search__selected" id="search__selected">
+                    <option  class="options" selected >Filter by Region</option>
+                    <option  class="options" >Africa</option>
+                    <option  class="options">America</option>
 
                 </select>
             </form>
 
-            <section class="cards container">
+            <section class="cards container" >
 
-                <a href="http://www.youtube.com">
-
-                
+                <a class="card__link" href="#">
 
                 <article class="card">
 
                     <figure class="card__figure">
-                        <img class="card__img" src="#" alt="flag__country">
+                        <img class="card__img" src="https://flagcdn.com/w320/al.png" alt="flag__country">
                     </figure>
 
                     <section class="card__texts">
 
                         <h3 class="card__title">Gemany</h3>
-                        <h3 class="card__populacion"> <span class="card__bold">populacion:</span>81,770,900</h3>
-                        <h3 class="card__Region">     <span class="card__bold">Region:</span>Europe </h3>
-                        <h3 class="card__capital">    <span class="card__bold"> Capital:</span> berlin</h3>
+                        
+                        <h4 class="card__populacion card__fields__letter">
+                            <span class="card__bold">Populacion: </span>
+                            81,770,900
+                        </h4>
+                        <h4 class="card__Region card__fields__letter">     <span class="card__bold">Region: </span>Europe </h4>
+                        <h4 class="card__capital card__fields__letter">    <span class="card__bold">Capital: </span> berlin</h4>
 
                     </section>
 
