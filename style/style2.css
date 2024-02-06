@@ -235,3 +235,11 @@ body{
  
    
 }
+.dark-mode-background{
+    background-color: var(--Very--Dark-Blue-Dark-Mode-Background);
+    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+}
+.dark-mode-element{
+    background-color: var(--Dark--Blue-Dark-Mode-Elements);
+    color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
+}

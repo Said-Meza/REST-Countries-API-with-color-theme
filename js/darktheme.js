@@ -12,8 +12,8 @@ const d= document,
             $selectorsBackground = d.querySelectorAll("[data-dark-background]"),
             $selectorsElements = d.querySelectorAll("[data-dark-element]");
             
-            console.log($themeDarkbtn)
-            console.log($selectorsBackground)
+            // console.log($themeDarkbtn)
+            // console.log($selectorsBackground)
             // console.log($selectorsElements)
             
 
@@ -40,12 +40,12 @@ const d= document,
         
         d.addEventListener("click",(e)=>{
             
-            console.log(e.target)
+            // console.log(e.target)
 
             if(e.target.matches(".nav__darktext"))
             {       
                 conta++;
-                console.log(`---`,conta)
+                // console.log(`---`,conta)
                 if(conta === 1){
                     darkMode();
                     conta=1;
