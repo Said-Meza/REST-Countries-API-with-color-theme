@@ -1,34 +1,40 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-dark-background >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
-<body>
 
-    <nav class="nav">
+<!-- data-dark-background is to background -->
+<!-- data-dark-element is to element -->
+
+<body data-dark-background="" class="dark-mode-background" >
+
+    <nav data-dark-element class="nav dark-mode-element" >
         <h4 class="nav__title">Where in the world?</h4>
 
-        <button class="nav__darkmode">
+        <button data-dark-element class="dark-mode-element nav__darkmode dark-mode-btn" id="dark-mode-btn">
+           
             <figure class="nav__icon">
                 <img class="nav__img" src="assets/luna.png" alt="icon__darkmode">
             </figure>
+           
             <h5 class="nav__darktext">Dark Mode</h5>
+        
         </button>
 
     </nav>
 
     <main class="main">
 
-            <form class="search__form" action="#">
+            <form data-dark-background class="dark-mode-background search__form" action="#">
 
+                <label  class="lupa " for="search_country"> <img class="lupa__img" src="assets/lupa.png" alt="search"> </label>
+                <input data-dark-element type="search" class="dark-mode-element input" name="search_country" id="search_country" placeholder="Search for a country...">
                 
-                    <label class="lupa" for="search_country"> <img class="lupa__img" src="assets/lupa.png" alt="search"> </label>
-                    <input type="search" class="input" name="search_country" id="search_country" placeholder="Search for a country...">
-                
-                <select class="select input" name="search__selected" id="search__selected">
+                <select data-dark-element class="select input" name="search__selected" id="search__selected">
                     <option  class="options" selected >Filter by Region</option>
                     <option  class="options" >Africa</option>
                     <option  class="options">America</option>
@@ -36,11 +42,11 @@
                 </select>
             </form>
 
-            <section class="cards container" >
+            <section  class="cards container" >
 
-                <a class="card__link" href="#">
+                <a class="card__link" href="./views/more.html">
 
-                <article class="card">
+                <article data-dark-element class="card">
 
                     <figure class="card__figure">
                         <img class="card__img" src="https://flagcdn.com/w320/al.png" alt="flag__country">
@@ -61,7 +67,8 @@
 
                 </article>
                 </a>
-                <a class="card__link" href="#">
+
+                <a class="card__link" href="">
 
                     <article class="card">
     
@@ -159,6 +166,6 @@
 
     </main>
     
-
+    <script type="module" src="app.js"></script>
 </body>
 </html>
