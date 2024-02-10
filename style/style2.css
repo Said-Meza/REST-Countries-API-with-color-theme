@@ -15,10 +15,7 @@
     box-sizing: border-box;
     /* outline: auto; */
 }
-.dark-mode{
-    background-color: var(--second-color);
-    color: var(--main-color);
-}
+
 body{
     font-family: var(--font-family);
     background-color:var(--Very--Light-Gray-Light-Mode-Background);
@@ -42,7 +39,7 @@ body{
     font-size: 1rem;
 }
 .nav__darkmode{
-    background-color: var(--Very--Light-Gray-Light-Mode-Background);
+    background-color: var(--White--Dark-Mode-Text-and-Light-Mode-Elements);
     display: flex;
     justify-content: center;
     align-items: center;

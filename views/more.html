@@ -6,16 +6,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="../style/style2.css">
 </head>
-<body data-dark-background>
+<body data-dark-background >
 
     <nav data-dark-element  class="nav">
         <h4 class="nav__title">Where in the world?</h4>
 
         <button data-dark-element  class="nav__darkmode">
-            <figure class="nav__icon">
+            <figure  class="nav__icon">
                 <img class="nav__img" src="../assets/luna.png" alt="icon__darkmode">
             </figure>
-            <h5 class="nav__darktext">Dark Mode</h5>
+            <h5 data-dark-element class="nav__darktext">Dark Mode</h5>
         </button>
 
     </nav>
@@ -23,13 +23,14 @@
     <main class="main">
 
             <a data-dark-element  class="comeback botton" href="../index.html"> <span class="arrow"></span> Back</a>
+<!--  -->
+           <template id="plantilla">
 
-           
-            <section class="content_container container" >
+              <section class="content_container container" >
 
                      
                     <figure class="content__figure">
-                        <img class="content__img" src="https://flagcdn.com/w320/al.png" alt="flag__country">
+                        <img class="content__img" src="" alt="flag__country">
                     </figure>
 
                     <section class="card__texts">
@@ -38,17 +39,17 @@
 
                         <section class="content content1">
                            
-                            <h4 class="card">Native Name: <span class="card__bold">germany</span></h4>
-                            <h4 class="card">Populacion: <span class="card__bold"> 81,770,900</span></h4>
-                            <h4 class="card">Region: <span class="card__bold"> </span>Europe </h4>
-                            <h4 class="card">Sub Region: <span class="card__bold">western europe</span> </h4>
-                            <h4 class="card">Capital: <span class="card__bold">Bruseles </span></h4>
+                            <h4 class="card">Native Name: <span class="card__bold name"></span></h4>
+                            <h4 class="card">Populacion: <span class="card__bold population"> </span></h4>
+                            <h4 class="card">Region: <span class="card__bold region"> </span> </h4>
+                            <h4 class="card">Sub Region: <span class="card__bold subregion"></span> </h4>
+                            <h4 class="card">Capital: <span class="card__bold capital">Bruseles </span></h4>
                         </section>
 
                         <section class="content content2">
-                            <h4 class="card">Top Level Domain: <span class="card__bold"> .be</span></h4>
-                            <h4 class="card">Currencies: <span class="card__bold">Euro</span> </h4>
-                            <h4 class="card">Languages: <span class="card__bold">berlin</span> </h4>
+                            <h4 class="card">Top Level Domain: <span class="card__bold domain"> .be</span></h4>
+                            <h4 class="card">Currencies: <span class="card__bold currencies"></span> </h4>
+                            <h4 class="card">Languages: <span class="card__bold languaje"></span> </h4>
                         
                         </section>
 
@@ -56,9 +57,10 @@
 
                             <h3 class="card">Border Contries: <span class="card__bold"> </span> </h3>
 
-                            <div class="other__container">
-                                    <a data-dark-element  class="botton botton--modifi" href="#"> france</a>
-                                    
+                            <div  class="other__container">
+
+                                <h5 data-dark-element class="morepaises" >  </h5>
+                                   
                             </div>
                             
                         </section>
@@ -66,10 +68,12 @@
                     
                     </section>
 
-            </section>
+              </section>
+
+           </template>
 
     </main>
     
-<script type="module" src="../app.js"></script>
+<script type="module" src="../js/more.js"></script>
 </body>
 </html>

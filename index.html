@@ -10,12 +10,12 @@
 <!-- data-dark-background is to background -->
 <!-- data-dark-element is to element -->
 
-<body data-dark-background class="dark-mode-background" >
+<body data-dark-background  >
 
-    <nav data-dark-element class="nav dark-mode-element" >
+    <nav data-dark-element class="nav " >
         <h4 class="nav__title">Where in the world?</h4>
 
-        <button data-dark-element class="dark-mode-element nav__darkmode dark-mode-btn" id="dark-mode-btn">
+        <button data-dark-element class=" nav__darkmode dark-mode-btn" id="dark-mode-btn">
            
             <figure class="nav__icon">
                 <img class="nav__img" src="assets/luna.png" alt="icon__darkmode">
@@ -29,25 +29,33 @@
 
     <main class="main">
 
-            <form data-dark-background class="dark-mode-background search__form" action="#">
+            <form data-dark-background class=" search__form" action="#">
 
                 <label  class="lupa " for="search_country"> <img class="lupa__img" src="assets/lupa.png" alt="search"> </label>
-                <input data-dark-element type="search" class="dark-mode-element input" name="search_country" id="search_country" placeholder="Search for a country...">
+                <input data-dark-element type="search" class="input searchss" name="search_country" id="search_country" placeholder="Search for a country...">
                 
                 <select data-dark-element class="select input" name="search__selected" id="search__selected">
-                    <option  class="options" selected >Filter by Region</option>
-                    <option  class="options" >Africa</option>
-                    <option  class="options">America</option>
+                    <option  class="options"  selected >Filter by Region</option>
+                    <option  class="options" value="Africa" selected >Africa</option>
+                    <option  class="options" value="america" >America</option>
+                    <option  class="options" value="asia"  >Asia</option>
+                    <option  class="options" value="europe" >Europe</option>
+                    <option  class="options" value="oceania" >Oceania</option>
 
                 </select>
             </form>
 
             <section  class="cards container" >
+                
 
-                <a class="card__link" href="./views/more.html">
+            </section>
 
-                <article data-dark-element class="card">
 
+                <template  id="card">
+                    <article data-dark-element class="card">
+
+                    <a  data-dark-element  class="card__link" href="">
+                        
                     <figure class="card__figure">
                         <img class="card__img" src="https://flagcdn.com/w320/al.png" alt="flag__country">
                     </figure>
@@ -56,116 +64,27 @@
 
                         <h3 class="card__title">Gemany</h3>
                         
-                        <h4 class="card__populacion card__fields__letter">
-                            <span class="card__bold">Populacion: </span>
-                            81,770,900
+                        <h4 class="card__bold ">Populacion:
+                            <span class="card__populacion card__fields__letter">81,770,900</span>   
                         </h4>
-                        <h4 class="card__Region card__fields__letter">     <span class="card__bold">Region: </span>Europe </h4>
-                        <h4 class="card__capital card__fields__letter">    <span class="card__bold">Capital: </span> berlin</h4>
-
+                        <h4 class="card__bold ">Region:
+                            <span class="card__Region card__fields__letter">81,770,900</span>   
+                        </h4>
+                        <h4 class="card__bold ">Capital::
+                            <span class="card__capital card__fields__letter">81,770,900</span>   
+                        </h4>
+                       
                     </section>
-
-                </article>
-                </a>
-
-                <a class="card__link" href="">
-
-                    <article class="card">
-    
-                        <figure class="card__figure">
-                            <img class="card__img" src="https://flagcdn.com/w320/al.png" alt="flag__country">
-                        </figure>
-    
-                        <section class="card__texts">
-    
-                            <h3 class="card__title">Gemany</h3>
-                            
-                            <h4 class="card__populacion card__fields__letter">
-                                <span class="card__bold">Populacion: </span>
-                                81,770,900
-                            </h4>
-                            <h4 class="card__Region card__fields__letter">     <span class="card__bold">Region: </span>Europe </h4>
-                            <h4 class="card__capital card__fields__letter">    <span class="card__bold">Capital: </span> berlin</h4>
-    
-                        </section>
-    
-                    </article>
                     </a>
-                    <a class="card__link" href="#">
-
-                        <article class="card">
-        
-                            <figure class="card__figure">
-                                <img class="card__img" src="https://flagcdn.com/w320/al.png" alt="flag__country">
-                            </figure>
-        
-                            <section class="card__texts">
-        
-                                <h3 class="card__title">Gemany</h3>
-                                
-                                <h4 class="card__populacion card__fields__letter">
-                                    <span class="card__bold">Populacion: </span>
-                                    81,770,900
-                                </h4>
-                                <h4 class="card__Region card__fields__letter">     <span class="card__bold">Region: </span>Europe </h4>
-                                <h4 class="card__capital card__fields__letter">    <span class="card__bold">Capital: </span> berlin</h4>
-        
-                            </section>
-        
-                        </article>
-                        </a>
-                        
-                        <a class="card__link" href="#">
-
-                            <article class="card">
+                </article>
+            </template>
             
-                                <figure class="card__figure">
-                                    <img class="card__img" src="https://flagcdn.com/w320/al.png" alt="flag__country">
-                                </figure>
-            
-                                <section class="card__texts">
-            
-                                    <h3 class="card__title">Gemany</h3>
-                                    
-                                    <h4 class="card__populacion card__fields__letter">
-                                        <span class="card__bold">Populacion: </span>
-                                        81,770,900
-                                    </h4>
-                                    <h4 class="card__Region card__fields__letter">     <span class="card__bold">Region: </span>Europe </h4>
-                                    <h4 class="card__capital card__fields__letter">    <span class="card__bold">Capital: </span> berlin</h4>
-            
-                                </section>
-            
-                            </article>
-                            </a>
-                            <a class="card__link" href="#">
-
-                                <article class="card">
-                
-                                    <figure class="card__figure">
-                                        <img class="card__img" src="https://flagcdn.com/w320/al.png" alt="flag__country">
-                                    </figure>
-                
-                                    <section class="card__texts">
-                
-                                        <h3 class="card__title">Gemany</h3>
-                                        
-                                        <h4 class="card__populacion card__fields__letter">
-                                            <span class="card__bold">Populacion: </span>
-                                            81,770,900
-                                        </h4>
-                                        <h4 class="card__Region card__fields__letter">     <span class="card__bold">Region: </span>Europe </h4>
-                                        <h4 class="card__capital card__fields__letter">    <span class="card__bold">Capital: </span> berlin</h4>
-                
-                                    </section>
-                
-                                </article>
-                                </a>
-
-            </section>
 
     </main>
     
-    <script type="module" src="app.js"></script>
+    <script type="module" src="app.js" >
+        
+    </script>
+    
 </body>
 </html>
