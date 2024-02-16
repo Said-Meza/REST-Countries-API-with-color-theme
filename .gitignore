@@ -16,3 +16,7 @@
 
 README-TEMPLATE.MD
 STYLE-GUIDE.MD
+
+git remote add origin https://github.com/Said-Meza/REST-Countries-API-with-color-theme.git
+git branch -M main
+git push -u origin main

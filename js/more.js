@@ -1,4 +1,4 @@
-import darktheme from "./darktheme.js";
+
 import api from "./api_routes.js";
 import ajax from "./ajax.js";
 
@@ -6,16 +6,35 @@ const d=document,
     $template=d.getElementById("plantilla").content,
     $fragment=d.createDocumentFragment(),
     $main=d.querySelector("main"),
+    rootElement = document.documentElement,
     ls=localStorage;
 
-    darktheme(".nav__darktext","dark-mode-background","dark-mode-element");
-    let {hash}=location;
+   let conta=0,
+    {hash}=location;
     const param = hash.substring(2),
     [key, value] = param.split('=');
+
+
+    const darkmode =()=>{
+        rootElement.style.setProperty('--Element', 'hsl(209, 23%, 22%)');
+        rootElement.style.setProperty('--Background', 'hsl(207, 26%, 17%)');
+        rootElement.style.setProperty('--Text', 'white');
+    }      
+    
+    const ligthmode=()=>{
+        rootElement.style.setProperty('--Element', 'hsl(0, 0%, 100%)');
+                rootElement.style.setProperty('--Background', 'hsl(0, 100%, 98%)');
+                rootElement.style.setProperty('--Text', ' hsl(200, 15%, 8%)');
+                conta=0;
+    }
     
         await ajax({
             url:`${api.SEARCH}${value}`,
             cbSuccess:((busqueda)=>{
+
+                if (ls.getItem("modedark")==1){
+                    darkmode();
+                  }
 
                 $template.querySelector(".content__img").src=busqueda[0].flags.svg
                 $template.querySelector(".card__title").textContent=busqueda[0].name.common
@@ -72,6 +91,7 @@ const d=document,
                 }else{
                     $template.querySelector(".morepaises").textContent="No has Border Contries";
                 }
+                
                 let $clone = document.importNode($template, true);
                 $fragment.appendChild($clone);
 
@@ -79,16 +99,28 @@ const d=document,
             })
         })
 
-    if (ls.getItem("theme") === null) {
-        ls.setItem("theme","light")
-        $template.querySelector(".botton--modifi").classList.removed(`dark-mode-element`);
-    }
-    if (ls.getItem("theme") === "dark") {
-            $template.querySelector(".botton--modifi").classList=`dark-mode-element`;
-            darktheme(".nav__darktext","dark-mode-background","dark-mode-element");
-    }
 
-    darktheme(".nav__darktext","dark-mode-background","dark-mode-element");
+        d.addEventListener("click",(e)=>{
+        
+            if(e.target.matches(".nav__darktext")||e.target.matches(".nav__img")|| e.target.matches(".nav__darkmode")){
+                e.preventDefault();                    
+                conta++;
+
+                if(conta==1){
+                    darkmode()
+                    ls.setItem("modedark","1")
+                }
+                if(conta>1 ||conta ==0)
+                {
+                    ligthmode()
+                    ls.setItem("modedark","0")
+                }
+            }
+        })
+
+   
+
+
 
 
        

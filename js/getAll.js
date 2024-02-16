@@ -6,18 +6,20 @@
     try {
         
         const res = await fetch(url),
+            
             json= await res.json(),
             indexpag = (api.PAGE-1) * api.ITEMS ,
             indexitems = indexpag + api.ITEMS;
             countries =  json.slice(indexpag ,indexitems)
             cbSuccess(countries)
            
+            // console.log(api.PAGE)
             
         } 
         catch (err) {
         console.log(err);
         let message = err.statusText || "Ocurrió un error";
-        document.getElementById("main").innerHTML=`
+        document.querySelector("main").innerHTML=`
         <div >
             <p>Error:${err.status} Mesansaje:${message}</p>
         <div>`;

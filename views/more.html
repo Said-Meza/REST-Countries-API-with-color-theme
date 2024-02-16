@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../style/style2.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body data-dark-background >
 
-    <nav data-dark-element  class="nav">
-        <h4 class="nav__title">Where in the world?</h4>
-
-        <button data-dark-element  class="nav__darkmode">
-            <figure  class="nav__icon">
-                <img class="nav__img" src="../assets/luna.png" alt="icon__darkmode">
+    <header  data-dark-element class="header">
+        <nav class="nav">
+          <h4 class="nav__title">Where in the world?</h4>
+  
+          <a href="" class="nav__darkmode">
+            <figure class="nav__icon">
+              <img
+                class="nav__img"
+                src="../assets/luna.png"
+                alt="icon__darkmode"
+              />
             </figure>
+  
             <h5 data-dark-element class="nav__darktext">Dark Mode</h5>
-        </button>
+          </a>
+        </nav>
+      </header>
 
-    </nav>
+    <main data-dark-background class="main">
 
-    <main class="main">
+        <a  data-dark-element class=" botton container " href="../index.html"> <span class="arrow">⬅ </span> Back</a>
 
-            <a data-dark-element  class="comeback botton" href="../index.html"> <span class="arrow"></span> Back</a>
-           <template id="plantilla">
-              <section class="content_container container" >
+            <template id="plantilla">
+
+              <!-- <section class="content_container container" >
          
                     <figure class="content__figure">
                         <img class="content__img" src="" alt="flag__country">
@@ -60,9 +68,59 @@
                             </div>
                         </section>
                     </section>
-              </section>
+              </section> -->
+              <section data-dark-background class="content_container container">
 
-           </template>
+                <figure class="content__figure">
+                  <img class="content__img" src="https://flagcdn.com/w320/al.png" alt="flag__country" />
+                </figure>
+    
+                <section class="content__texts">
+                  <h2 class="card__title" id="country">Gemany</h2>
+    
+                  <section class="content content1">
+                    <h4 class="card__bold">Native Name:
+                      <span class="card__result name">german</span>
+                    </h4>
+                    <h4 class="card__bold">
+                      Populacion: <span class="card__result population"> 98696969</span>
+                    </h4>
+                    <h4 class="card__bold">
+                      Region: <span class="card__result region">europa </span>
+                    </h4>
+                    <h4 class="card__bold">
+                      Sub Region: <span class="card__result subregion"></span>
+                    </h4>
+                    <h4 class="card__bold">
+                      Capital: <span class="card__result capital">Bruseles </span>
+                    </h4>
+                  </section>
+    
+                  <section class="content content2">
+                    <h4 class="card__bold">
+                      Top Level Domain: <span class="card__result domain"> .be</span>
+                    </h4>
+                    <h4 class="card__bold">
+                      Currencies: <span class="card__result currencies">dollar</span>
+                    </h4>
+                    <h4 class="card__bold">
+                      Languages: <span class="card__result languaje">ingles</span>
+                    </h4>
+                  </section>
+    
+                  <section class="content content3">
+                    <h3 class="card__bold"> Border Contries: </h3>
+    
+                    <div class="other__container">
+                      <h5 data-dark-element class="morepaises"></h5>
+                      <!-- <h5 data-dark-element class="botton botton--modifi" > france </h5> -->
+                    </div>
+                  </section>
+    
+                </section>
+              
+            </section>
+            </template>
 
     </main>
     

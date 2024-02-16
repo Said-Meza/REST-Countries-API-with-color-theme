@@ -10,73 +10,84 @@
 <!-- data-dark-background is to background -->
 <!-- data-dark-element is to element -->
 
-<body data-dark-background  >
+<body data-dark-background>
 
-    <nav data-dark-element class="nav " >
+    <header data-dark-element class="header">
+
+        <nav class="nav">
+
         <h4 class="nav__title">Where in the world?</h4>
 
-        <button data-dark-element class=" nav__darkmode dark-mode-btn" id="dark-mode-btn">
+        <a href="#" class="nav__darkmode">
            
             <figure class="nav__icon">
                 <img class="nav__img" src="assets/luna.png" alt="icon__darkmode">
             </figure>
            
-            <h5 class="nav__darktext">Dark Mode</h5>
+            <h5 data-dark-element class="nav__darktext">Dark Mode</h5>
         
-        </button>
+        </a>
 
-    </nav>
+        </nav>
+    </header>
 
-    <main class="main">
+    <main data-dark-background class="main">
 
-            <form data-dark-background class=" search__form" action="#">
+            <form data-dark-background class="search__form" action="#">
 
-                <label  class="lupa " for="search_country"> <img class="lupa__img" src="assets/lupa.png" alt="search"> </label>
-                <input data-dark-element type="search" class="input searchss" name="search_country" id="search_country" placeholder="Search for a country...">
-                
-                <select data-dark-element class="select input" name="search__selected" id="search__selected">
-                    <option  class="options"  selected >Filter by Region</option>
-                    <option  class="options" value="Africa" selected >Africa</option>
-                    <option  class="options" value="america" >America</option>
-                    <option  class="options" value="asia"  >Asia</option>
-                    <option  class="options" value="europe" >Europe</option>
-                    <option  class="options" value="oceania" >Oceania</option>
+                <div class="search_input">
 
+                    <figure  class="lupa_container" > 
+                         <img class="lupa__icon" src="assets/lupa.png" alt="search"> 
+                    </figure>
+                    <input data-dark-element type="search" class="input searchs" name="search_country" id="search_country" placeholder="Search for a country...">
+                 
+                 </div>
+                <select data-dark-element class="input select" name="search__selected" id="search__selected">
+                    <option  class="options" selected >Filter by Region</option>
+                    <option  class="options" value="Africa" >Africa</option>
+                    <option  class="options" value="America">America</option>
+                    <option  class="options" value="Asia"   >Asia</option>
+                    <option  class="options" value="Europe" >Europe</option>
+                    <option  class="options" value="Oceania">Oceania</option>
                 </select>
+                
             </form>
 
-            <section  class="cards container" >
+            <section data-dark-background  class="cards container" >
                 
-
             </section>
 
+            <template  id="card">
 
-                <template  id="card">
-                    <article data-dark-element class="card">
+                <article data-dark-element class="card">
 
-                    <a  data-dark-element  class="card__link" href="">
+                    <a class="card__link" href="../nuevaplatilla/views/more.html">
                         
-                    <figure class="card__figure">
-                        <img class="card__img" src="https://flagcdn.com/w320/al.png" alt="flag__country">
-                    </figure>
+                            <figure class="card__figure">
+                                <img class="card__img" src="https://flagcdn.com/w320/al.png" alt="flag__country">
+                            </figure>
 
-                    <section class="card__texts">
+                            <section data-dark-element class="card__texts">
 
-                        <h3 class="card__title">Gemany</h3>
-                        
-                        <h4 class="card__bold ">Populacion:
-                            <span class="card__populacion card__fields__letter">81,770,900</span>   
-                        </h4>
-                        <h4 class="card__bold ">Region:
-                            <span class="card__Region card__fields__letter">81,770,900</span>   
-                        </h4>
-                        <h4 class="card__bold ">Capital::
-                            <span class="card__capital card__fields__letter">81,770,900</span>   
-                        </h4>
-                       
-                    </section>
+                                <h3 class="card__title">Gemany</h3>
+                                
+                                <h4 class="card__bold">Populacion:
+                                    <span class="card__populacion card__result">81,770,900</span>   
+                                </h4>
+                                <h4 class="card__bold ">Region:
+                                    <span class="card__Region card__result">Europe</span>   
+                                </h4>
+                                <h4 class="card__bold ">Capital:
+                                    <span class="card__capital card__result">Bayer</span>   
+                                </h4>
+                            
+                            </section>
                     </a>
-                </article>
+            </article>
+         </section>
+
+
             </template>
             
 

@@ -7,11 +7,11 @@ export default async function ajax(props){
             json = await res.json()
             cbSuccess(json)
     } catch (err) {
-        let message=err.statusText||"Ocurrio un error al acceder a la API";
-        document.getElementById("main").innerHTML=`
-        <div >
-            <p>Error:${err.status} Mesansaje:${message}</p>
-        <div>`;
+        // let message=err.statusText||"Ocurrio un error al acceder a la API";
+        // document.getElementById("main").innerHTML=`
+        // <div >
+        //     <p>Error:${err.status} Mesansaje:${message}</p>
+        // <div>`;
     }
     
 }

@@ -1,3 +1,9 @@
+
+versions
+    ^1.0.0 "first version with bug"
+    3.0.0  "update the template and css, scrollinfinite was change to every query of form and change the modedark with other way "
+
+
 # Frontend Mentor - REST Countries API with color theme switcher
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)

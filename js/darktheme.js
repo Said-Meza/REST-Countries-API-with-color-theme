@@ -1,43 +1,53 @@
 const d= document,
-    ls=localStorage;
-
+ls=localStorage; 
+let conta=0;
 // <!-- data-dark-background is to background -->
 // <!-- data-dark-element is to element -->
- 
-    export default function darktheme(btn,classDarkBack,classDarkEl) {
 
-        let conta=0;
+    // export default function darktheme(btn,[data-dark-background],[data-dark-element]) {
+    export default function darktheme(btn,btnimg,classDarkBack,classDarkEl) {
+
         
-        const $selectorsBackground = d.querySelectorAll("[data-dark-background]"),
-                $selectorsElements = d.querySelectorAll("[data-dark-element]");
-            
+        const $modedark_back=document.querySelectorAll("[data-dark-background]"),
+        $modedark_elem=document.querySelectorAll("[data-dark-element]")
+        
+
+        // console.log($modedark_back,$modedark_elem)
+
         const darkMode = () =>
         {
-            $selectorsBackground.forEach(el => el.classList.add(classDarkBack));
-            $selectorsElements.forEach(el => el.classList.add(classDarkEl));
+            $modedark_back.forEach(el => el.classList.add(classDarkBack));
+            $modedark_elem.forEach(el => el.classList.add(classDarkEl));
             ls.setItem("theme","dark") 
         }    
         const lighMode = () =>{
-            $selectorsBackground.forEach(el => el.classList.remove(classDarkBack));
-            $selectorsElements.forEach(el => el.classList.remove(classDarkEl));
+            $modedark_back.forEach(el => el.classList.remove(classDarkBack));
+            $modedark_elem.forEach(el => el.classList.remove(classDarkEl));
             ls.setItem("theme","light")
         }    
     
         d.addEventListener("click",(e)=>{
            
-            if(e.target.matches(btn))
-            {       
-                conta++;
-                if(conta === 1){
-                    darkMode();
-                    conta=1;
-                          
-                }else{
-                    lighMode();
-                    conta=0;
-                    
-                }
+            // if(e.target.matches(btn))
+            
 
+            if(e.target.matches(btn)||e.target.matches(btnimg)){
+                e.preventDefault();
+                // console.log(`si paso el click de matches`)
+      
+                $modedark_back.forEach((el)=>{el.classList.toggle(classDarkBack)})
+      
+                $modedark_elem.forEach((el)=>{el.classList.toggle(classDarkEl)})
+                conta++;
+      
+                if(conta==1)
+                {
+                  ls.setItem("theme","dark")
+                }else{
+                  conta==0
+                  ls.setItem("theme","light")
+                }
+                
             }
         })
        
@@ -45,7 +55,7 @@ const d= document,
            
                 if (ls.getItem("theme") === null) {
                     ls.setItem("theme","light")
-                    let conta=0;
+                    conta=0;
                 }
                 
                 if (ls.getItem("theme") === "light") {
